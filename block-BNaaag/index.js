@@ -2,11 +2,10 @@
 
 var fs = require('fs');
 
-fs.readFile('./content.md', (err, content) => {
+f s.readFile('./content.md', (err, content) => {
     console.log(err, content);
     console.log(content.toString());
 });
-console.log('keshav');
 
 // - create file whenever required on your own.
 
