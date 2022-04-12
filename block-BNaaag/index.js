@@ -1,10 +1,12 @@
-writeCode
-
 // 1. require fs in a file(`index.js`) and use fs.readFile to read content of a file(content.md)
 
-fs.readFile('./content.md', (err,content) => {
+var fs = require('fs');
+
+fs.readFile('./content.md', (err, content) => {
     console.log(err, content);
-})
+    console.log(content.toString());
+});
+console.log('keshav');
 
 // - create file whenever required on your own.
 
@@ -18,4 +20,6 @@ fs.readFile('./content.md', (err,content) => {
 // 2. Run sync code from fs module in the above file(`index.js`).
 // 3. Run async code from fs module in same file.
 // 4. create new buffer of fixed length 10 and store it in variable named buff1 and console the buff1.
+
+
 // 5. write content(Welcome to Buffer) to buff1 variable.
