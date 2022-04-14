@@ -12,12 +12,12 @@ function handleRequest(req, res) {
         res.setHeader('Content-Text','text/html');
         res.end('<h2>this is all about NodeJS</h2>');
     }else if(req.method === 'POST' && pathName === '/about'){
-        res.setHeader('Content-Text','text/html');
-        res.end('<h2>this is all about NodeJS</h2>');
+        res.setHeader('Content-Text','application/json');
+        res.end(`{message: this is a post request}`);
     }
 }
 
 
-server.listen(3000, () => {
-    console.log('server is listening on port 3000')
+server.listen(5000, () => {
+    console.log('server is listening on port 5000')
 })
