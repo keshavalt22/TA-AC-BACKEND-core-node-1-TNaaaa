@@ -9,8 +9,13 @@ function areaRectangle(width, height) {
 }
 
 
-
 function findArea(r){
     let pi = 3.14159265358979323846; 
     return (pi * r * r);
+}
+
+module.exports = {
+    areaRectangle,
+    areaSquare,
+    findArea,
 }
