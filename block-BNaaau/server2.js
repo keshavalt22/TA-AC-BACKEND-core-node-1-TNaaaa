@@ -3,7 +3,7 @@ var http = require('http');
 var server = http.createServer(handleRequest);
 
 function handleRequest(res, req) {
-    res.write('My first server in NodeJS')
+    res.end('My first server in NodeJS')
 }
 
 server.listen(5100, () => {
