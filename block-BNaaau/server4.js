@@ -4,7 +4,7 @@ var server = http.createServer(handleRequest);
 
 function handleRequest(req, res) {
     console.log(req.method,req.url);
-    res.setHeader('content-type', 'text/html');
+    res.end(req.method + req.url);
 }
 
 
