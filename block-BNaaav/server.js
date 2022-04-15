@@ -17,11 +17,18 @@ function handleRequest(req, res) {
     }
     if(req.url.split('.').pop() === 'css') {
         res.setHeader('Content-Type', 'text/css');
-        fs.readFile('./assets/stylesheets/' + req.url, (err, content) => {
+        fs.readFile('./assets/stylesheets/style.css' + req.url, (err, content) => {
           if(err) return console.log(err);
           res.end(content)
         })
-      }
+    }
+    if(req.url.split('.').pop() === 'img') {
+        res.setHeader('Content-Type', 'text/img');
+        fs.readFile('./assets/media' + req.url, (err, content) => {
+          if(err) return console.log(err);
+          res.end(content)
+        })
+    }
 }
 
 server.listen(3000, () => {
